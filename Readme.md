@@ -10,7 +10,7 @@ Go to the base directory and execute command:
 
     scrapy crawl FuelStationSpider
 
-That will (re)generate _FuelStationSpider___results.xml_ file.
+That will (re)generate _PlacesSpider_results.xml_ file.
 
 You can also run 
 
