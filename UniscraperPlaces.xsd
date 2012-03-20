@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="UniscraperPlaces" targetNamespace="UniscraperPlaces" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <!-- Coordinate group, contains Google Maps coordinates -->
+  <xs:group name="coordinates">
+    <xs:sequence>
+      <xs:element name="Lat">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="-90"/>
+            <xs:maxInclusive value="90"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Lon">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="-180"/>
+            <xs:maxInclusive value="180"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  
+  <!-- Keywords type -->
+  <xs:complexType name="keywordstype">
+    <xs:sequence>
+      <xs:element name="value" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Main -->
+  <xs:element name="Places">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Place" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- Required elements. -->
+              <xs:element name="Name" type="xs:string"/>
+              <!-- Branche is the same thing as category. -->
+              <xs:element name="Branche" type="xs:string"/>
+              <xs:element name="Address" type="xs:string"/>
+              <!-- Optional elements. -->
+              <xs:group ref="coordinates" minOccurs="0"/>
+              <xs:element name="Email" type="xs:string" minOccurs="0"/>
+              <xs:element name="Phone" type="xs:string" minOccurs="0"/>
+              <xs:element name="Keywords" type="keywordstype" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

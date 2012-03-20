@@ -9,13 +9,18 @@ class PlaceItem(Item):
     # define the fields for your item here like:
     # name = Field()
     
-    name = Field()
-    phone = Field()
-    address = Field()
-    email = Field()
-    branche = Field()
-    keywords = Field()
-    
+    # Required.
+    Name = Field()
+    Branche = Field()
+    Address = Field()
+   
+    # Optional.
+
     # Google map coordinates.
-    lat = Field()
-    lon = Field()
+    Lat = Field()
+    Lon = Field()
+    
+    Email = Field()
+    Phone = Field()
+    
+    Keywords = Field()
