@@ -2,7 +2,7 @@
 
 Just a simple crawler to scrape some data for University course.
 
-Requires Python 2.7.
+Requires *Python 2.7*.
 
 ##Usage
 
@@ -49,6 +49,9 @@ The file _UniscraperPlaces.xsd_ contains XML Schema for the output.
         </Keywords>
       </Place>
     </Places>
+    
+The actual output isn't pretty printed as it's supposed to be read by a program and not a person.
+If that's really needed, make a bug.
 
 ##Dependencys
 
