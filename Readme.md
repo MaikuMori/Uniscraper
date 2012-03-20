@@ -10,17 +10,17 @@ Go to the base directory and execute command:
 
     scrapy crawl FuelStationSpider
 
-That will (re)generate _PlacesSpider_results.xml_ file.
+That will (re)generate [PlacesSpider_results.xml] file.
 
 You can also run 
 
-    scrapy crawl http://www.1188.lv/katalogs/K%C4%81zu%20saloni%20
+    scrapy crawl http://www.1188.lv/katalogs/Alus
 
 or any other category url to crawl that specific category.
 
 ##XML Schema
 
-The file _UniscraperPlaces.xsd_ contains XML Schema for the output.
+The file [UniscraperPlaces.xsd] contains XML Schema for the output.
 
 ##Example output
 
@@ -56,3 +56,6 @@ If that's really needed, make a bug.
 ##Dependencys
 
 * Scrapy >= 0.14
+
+[PlacesSpider_results.xml]: https://github.com/MaikuMori/Uniscraper/blob/master/PlacesSpider_results.xml
+[UniscraperPlaces.xsd]: https://github.com/MaikuMori/Uniscraper/blob/master/UniscraperPlaces.xsd
